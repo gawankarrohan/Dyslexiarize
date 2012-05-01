@@ -1,0 +1,61 @@
+.falling-letter {
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	top: -100px;
+	width: 1em;
+	height: 1em;
+	color: red;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px yellow;
+	-webkit-animation-iteration-count: infinite, 20;
+	-webkit-animation-direction: normal, normal;
+	-webkit-animation-timing-function: linear, ease-in;
+}
+
+.falling-letter span {
+	position: absolute;
+	display: block;
+	width: 1em;
+	height: 1em;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-transform-origin: 50% -100%;
+}
+
+.falling-letter.really-far-away{
+	font-size: 1em;
+}
+.falling-letter.far-away{
+	font-size: 2em;
+}
+.falling-letter.normal{
+	font-size: 4em;
+}
+.falling-letter.close{
+	font-size: 8em;
+}
+.falling-letter.really-close{
+	font-size: 16em;
+}
+
+@-webkit-keyframes fade {
+	0% { opacity: 1; }
+	85% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-webkit-keyframes drop {
+	0% { -webkit-transform: translate(0px, -50px); }
+	100% { -webkit-transform: translate(0px, 700px); }
+}
+
+@-webkit-keyframes spin {
+	0%   { -webkit-transform: rotate(-50deg); }
+	100% { -webkit-transform: rotate(50deg); }
+}
+
+
+
